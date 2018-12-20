@@ -1,0 +1,162 @@
+*{
+    font-family: Lato;
+    text-decoration: none;
+    
+    } 
+body, html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+body{
+    font-family: "Source Sans Pro",Tahoma,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.4em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    line-height: 1.7em;
+}
+
+section {
+    padding: 5rem 0;
+}
+section h2 {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+/*FONDO*/
+.img-responsive {
+    /* The image used */
+  background-image: url("../images/fondo.adrianalegriafondo.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+.branch{
+    background: url("images/fondo.adrianalegriaThinking.jpg") no-repeat center center fixed;
+    background-position: top right;
+    background-size: cover;
+    }
+/*Navigation mobile*/
+.LogoMobile{
+    max-width: 250px;
+    height: auto;
+}
+#navbarNav ul li a{
+    color: #343a40;
+    text-decoration: none;
+    letter-spacing: .0625rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+/*MENU WEB*/
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    margin: .75em .5em .75em 0;
+    font-family: Lato;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.menu ul li a, .menu ul li a:visited {
+    color: #fff;
+}
+.menu ul li.active-link {
+    color: #e43a3a;
+}
+.menu ul li a:hover {
+    color: #a2834e;
+    text-decoration: none;
+}
+
+.social ul{
+    list-style-type: none;
+    text-align: right;
+    padding: 0px;
+}
+
+.social ul li{
+display:inline;
+}
+
+.icon-inside{
+    color: #000; 
+}
+
+.social ul li a:hover {
+    text-decoration: none;
+}
+.content{
+    margin-top:150px;
+    color: #fff;
+}
+
+/*latest album*/
+.vinilo-dentro {
+    display: none;
+}
+.vinilo-dentro:hover {
+    display: block;
+}
+/*SocialMedia*/
+.SocialMedia{
+    background-color: #000;
+}
+
+/*Gigs*/
+.img-gigs {
+    /* The image used */
+  background-image: url("../images/adrianalegriagigs1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+.gigs{
+    border-bottom: 0.5mm ridge rgba(255, 255, 255, 0.6);
+    padding: 20px 0;
+}
+.dia{
+    font-size: 60px;
+    line-height: 1em;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+.mes span{
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+/*Footer*/
+.footer{
+    background-color: #000;
+}
+
