@@ -1,147 +1,270 @@
-*{
-    font-family: Lato;
-    text-decoration: none;
-    
-    } 
-body, html {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
+/* ******  Custom Properties (variables) ********** */
+:root{
+    --main-font: 'Lato';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
 
+    --main-color: #ffffff;
+    --main-modal-color: rgba(255, 255, 255, 0.75);
+    --second-color: #000000;
+    --second-modal-color: rgba(0, 0, 0, 0.75);
+
+    --bg-color: #fff;
+    --bg-modal-color: rgba(255, 255, 255, 0.75);
+    --bg-alternative-color: #000000;
+    --border-color: #ddd;
+
+    --text-color: #333;
+    --title-color: var(--second-color);
+
+    --link-color: var(--main-color);
+    --link-hover-color: var(--second-color);
+
+    --max-width: 1200px;
+    --header-height: 5rem;
+
+    --logo-width: 4rem;
+    --logo-height:  4rem;
+    --logo-spacing: .5rem;
+
+    --nav-height: 64px;
+}
+
+/* ****** Reset Styles ********** */
+html{
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
 body{
-    font-family: "Source Sans Pro",Tahoma,Arial,sans-serif;
-    font-size: 16px;
-    line-height: 1.4em;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0px;
-    text-transform: none;
-    line-height: 1.7em;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+a{
+    text-decoration: none;
+    color: var(--link-color);
+    transition: all .3s ease-out;
+}
+a:hover{
+    color: var(--link-hover-color);
+    text-decoration: none !important;
+    opacity: 0.3;
+}
+::selection{
+    background-color: var(--main-color);
+    color: var(--second-color) !important;
 }
 
-section {
-    padding: 5rem 0;
-}
+/* ****** Bootstrap Styles ********** */
+
 section h2 {
     font-size: 2.25rem;
     line-height: 2rem;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
 
-
-/*FONDO*/
-.img-responsive {
-    /* The image used */
-  background-image: url("../images/fondo.adrianalegriafondo.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.text-dark {
+    color: #000000 !important;
   }
-.branch{
-    background: url("images/fondo.adrianalegriaThinking.jpg") no-repeat center center fixed;
-    background-position: top right;
-    background-size: cover;
-    }
+.bg-dark {
+    background-color: #000000 !important;
+  }
+
+/* ****** My Styles ********** */
+
+body, html {
+    height: 100%;
+    width: 100%;
+  }
+
+
 /*Navigation mobile*/
 .LogoMobile{
     max-width: 250px;
     height: auto;
 }
 #navbarNav ul li a{
-    color: #343a40;
-    text-decoration: none;
+    color: var(--second-color);
     letter-spacing: .0625rem;
-    font-weight: 700;
     line-height: 1.5;
     font-size: 1.4rem;
 }
-
 /*MENU WEB*/
-.menu ul{
-    list-style-type: none;
-}
 .menu ul li{
-    margin: .75em .5em .75em 0;
-    font-family: Lato;
-    font-weight: 400;
-    font-style: normal;
+    color: var(--main-color);
+    list-style-type: none;
     font-size: 12px;
     line-height: 1.25em;
-    text-transform: uppercase;
     letter-spacing: 3px;
-    text-decoration: none;
-    list-style-type: none;
 }
-
 .menu ul li a, .menu ul li a:visited {
-    color: #fff;
-}
-.menu ul li.active-link {
-    color: #e43a3a;
-}
-.menu ul li a:hover {
-    color: #a2834e;
-    text-decoration: none;
+    color: var(--main-color);
 }
 
-.social ul{
-    list-style-type: none;
-    text-align: right;
-    padding: 0px;
-}
 
-.social ul li{
-display:inline;
-}
+/*****INDEX******/
 
-.icon-inside{
-    color: #000; 
-}
-
-.social ul li a:hover {
-    text-decoration: none;
-}
-.content{
-    margin-top:150px;
-    color: #fff;
-}
-
-/*latest album*/
-.vinilo-dentro {
-    display: none;
-}
-.vinilo-dentro:hover {
-    display: block;
-}
-/*SocialMedia*/
-.SocialMedia{
-    background-color: #000;
-}
-
-/*Gigs*/
-.img-gigs {
+/*Fondo*/
+.img-index {
     /* The image used */
-  background-image: url("../images/adrianalegriagigs1.jpg");
-
+  background-image: url("../images/fondo.adrianalegriafondo.jpg");
   /* Full height */
   height: 100%; 
-
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   }
+/*latest album*/
+.view {
+    overflow: hidden;
+    text-align: center;
+    cursor: default;
+ }
+ .view .mask,.view .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 15px;
+ }
+ .mask{
+     height: 328px;
+ }
+
+ .view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+  
+ }
+ .view p {
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center;
+    height: 50%;
+ }
+ .view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
+ }
+ .view a.info: hover {
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+ }
+
+
+ .view-first .mask {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background-color: rgba(255,255,255, 0.5);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+ }
+ .view-first h2 {
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+ }
+ .view-first p {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+ }
+
+ .view-first a.info {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+ }
+ .view-first:hover .mask {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+ }
+ .view-first:hover h2,
+ .view-first:hover p,
+ .view-first:hover a.info {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+ }
+ .view-first:hover p {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+ }
+ .view-first:hover a.info {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+ }
+                 
+/*SocialMedia*/
+
+/*Gigs*/
 .gigs{
     border-bottom: 0.5mm ridge rgba(255, 255, 255, 0.6);
-    padding: 20px 0;
+}
+.gigs a, a:visited{
+    color: var(--second-color);  
 }
 .dia{
     font-size: 60px;
@@ -152,11 +275,65 @@ display:inline;
 .mes span{
     display: block;
     font-size: 20px;
-    line-height: 30px;
-    text-align: center;
 }
 /*Footer*/
-.footer{
-    background-color: #000;
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-70px);
+		transform: translateY(-70px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+}
+.anna:hover {
+	animation: bounce 2s;
 }
 
+
+/******BOOKING******/
+
+/*Fondo*/
+.img-booking {
+    /* The image used */
+  background-image: url("../images/fondo.adrianalegriaThinking.jpg");
+  /* Full height */
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-size: cover;
+  }
+
+ 
+
+/* ****** Media Queries Small ********** */
+@media (max-width: 350px){
+    .LogoMobile{
+        max-width: 200px;
+    }
+    .navbar-brand {
+        margin-right: 0;
+    }
+}
+
+/* ****** Media Queries Medium ********** */
+@media (max-width: 768px){
+    body { padding-top: 70px; }
+}
+
+/* ****** Media Queries Large ********** */
+@media (min-width: 992px){
+    
+}
+
+/* ****** Media Queries ExtraLarge ********** */
+@media (min-width: 1200px){
+    
+}
