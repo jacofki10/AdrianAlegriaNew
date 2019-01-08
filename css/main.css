@@ -75,6 +75,9 @@ section h2 {
 .bg-dark {
     background-color: #000000 !important;
   }
+.navbar-brand {
+    margin-right: 0;
+}
 
 /* ****** My Styles ********** */
 
@@ -96,6 +99,9 @@ body, html {
     font-size: 1.4rem;
 }
 /*MENU WEB*/
+.menu{
+    width: 90px;
+}
 .menu ul li{
     color: var(--main-color);
     list-style-type: none;
@@ -256,8 +262,18 @@ body, html {
     -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
  }
-                 
-/*SocialMedia*/
+/*Radio*/
+.img-brand {
+  /* The image used */
+  background-image: url("../images/fondo.adrianalegriaThinking.jpg");
+  /* Full height */
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-size: cover;
+  } 
+
+/*photos*/
 
 /*Gigs*/
 .gigs{
@@ -276,6 +292,18 @@ body, html {
     display: block;
     font-size: 20px;
 }
+
+/*Stores*/
+.img-store {
+    /* The image used */
+    background-image: url("../images/fondo.adrianalegriaPower.jpg");
+    /* Full height */
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: left;
+    background-size: cover;
+    } 
+
 /*Footer*/
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
@@ -297,21 +325,6 @@ body, html {
 	animation: bounce 2s;
 }
 
-
-/******BOOKING******/
-
-/*Fondo*/
-.img-booking {
-    /* The image used */
-  background-image: url("../images/fondo.adrianalegriaThinking.jpg");
-  /* Full height */
-  height: 100%; 
-  /* Center and scale the image nicely */
-  background-position: right;
-  background-size: cover;
-  }
-
- 
 
 /* ****** Media Queries Small ********** */
 @media (max-width: 350px){
